@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var name = ""
+    @State private var selectedUser = ""
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            FirstScreenView(name: $name, selectedUser: $selectedUser)
         }
-        .padding()
     }
 }
 
